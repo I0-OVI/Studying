@@ -36,7 +36,7 @@ How could we transform the equation above to get $X(f)=F(f)*G(f)$.
 >*First, we substitute*
 $$x(t)= (f*g)(t) = \displaystyle \int _{-\infty} ^ \infty  f(\tau) g(t-\tau)\; d\tau$$*into the frequency domain representation.*
 $$X(f)=\displaystyle \int ^{\infty} _{-\infty} \left( \int _{-\infty} ^ \infty  f(\tau) g(t-\tau)\; d\tau \right) e^{-j2\pi ft} \;\; dt$$
-Based on the ? principle, we could swap the order of integral:
+Based on the **Fubini’s Theorem**, we could swap the order of integral:
 $$X(f)=\displaystyle \int ^{\infty} _{-\infty} f(\tau) \left( \int _{-\infty} ^ \infty    g(t-\tau)\;e^{-j2\pi ft}\; dt \right)  \;\; d\tau$$
 *We could first solve this integral:$\displaystyle\int _{-\infty} ^ \infty  g(t-\tau)\;e^{-j2\pi ft} dt$*
 *Substitute $u=t-r$,we could get:*
@@ -47,6 +47,7 @@ We could plug it back to the original equation:*
 $$X(f)=\displaystyle \int ^{\infty} _{-\infty} f(\tau) e^{-j2\pi fr} G(f)  \;\; d\tau$$
 $$X(f)=\displaystyle G(f)\int ^{\infty} _{-\infty} f(\tau) e^{-j2\pi fr}   \;\; d\tau$$
 $$X(f)=\displaystyle G(f)\cdot F(f)$$
+
 ### Convolution Neural Network
 In this part we just talk about the convolution in CNN. I have not learnt neural network and I will update it in the future. 
 First, we need to know an important term: kernel. It is a small matrix of weights which slides over the input matrix to get the output matrix.
